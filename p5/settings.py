@@ -17,6 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR=os.path.join(BASE_DIR,"templates")
 STATIC_DIR_MYAPP=os.path.join(os.path.join(BASE_DIR,"myapp"),"static")
 STATIC_DIR=os.path.join(BASE_DIR,"static")
+MEDIA_DIR=os.path.join(BASE_DIR,"media")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -24,7 +25,7 @@ STATIC_DIR=os.path.join(BASE_DIR,"static")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '9=msf+fte%&r%i!@u*4*zb9-#fq4)_)y=2x211z_^#wqzig!u('
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# - WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -125,6 +126,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     STATIC_DIR_MYAPP,
 ]
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=MEDIA_DIR
+
 
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_PORT=465
